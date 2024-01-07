@@ -1,0 +1,24 @@
+title:              Junglefowl Brazilian Jiu-Jitsu
+email:              contact@junglefowlbjj.ca
+description:        Martial arts academy in Sackville, New Brunswick. BJJ, MMA, Kickboxing, Yoga, Strength and Conditioning
+author:             Evan Brooks
+baseurl:            ""
+url:                "https://www.junglefowlbjj.ca"
+
+# Social Profiles
+pin_location: "https://maps.app.goo.gl/m9oZverv3qeV2Wjp8"
+facebook_username:  junglefowlbjj
+instagram_username: junglefowlbjj
+linkedin_username:
+
+# Add your google-analytics ID here to activate google analytics
+google_analytics:   G-YX5TQVSSXY # out your google-analytics code
+
+# Build settings
+markdown:           kramdown
+paginate:           5
+paginate_path:      "/posts/page:num/"
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap ## Uncomment this line to silentlyjung generate a sitemaps.org compliant sitemap for your Jekyll site

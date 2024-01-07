@@ -1,0 +1,20 @@
+// Import Core Clean Blog SCSS
+@import "../assets/vendor/startbootstrap-clean-blog/scss/styles.scss";
+
+.fixed-top {
+  .logo {
+    display: inline-block;
+  }
+}
+
+.fixed-top.is-fixed {
+  .logo {
+    display: none;
+  }
+}
+
+.timetable-workout { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; background-color: #ee0c19; font-weight: 700; font-family: 'Oswald', sans-serif; }
+.timetable-workout,.timetable.table>tbody>tr>td { color: #fff; }
+.timetable,.table>tbody>tr>th { font-size: 14px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; font-family: 'Oswald', sans-serif; }
+.timetable,.table>thead>tr>th { font-size: 14px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; font-family: 'Oswald', sans-serif; }
+.box-table { padding: 16px 30px; margin: 0 -15px 15px; border: 1px solid #eee; }
