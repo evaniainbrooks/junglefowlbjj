@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page_wide
 ---
 <style TYPE="text/css">
 .gallery-image-wrapper {
@@ -18,7 +18,7 @@ layout: page
   max-width: 100%;
 }
 </style>
-<h2><a href="/{{ site.gallery.dir }}">{{ page.title }}</a></h2>
+<h3><a href="/{{ site.gallery.dir }}">{{ site.gallery.galleries[page.gallery].info.desc }}</a></h3>
 <hr />
 <div class="row">
   {% for image in page.images %}

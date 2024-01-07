@@ -36,15 +36,25 @@ gallery:
     y: 400                  # max height of thumbnails (in pixels)
   # The following options are for individual galleries.
   galleries:
+    sackville:
+      best_image: headline.jpg
+      info:
+        desc: "A sneak peak into the new gym"
     old_location:
+      best_image: headline.jpg
       info:
         desc: "For 3 years we were located in Port Elgin, New Brunswick"
     competitions:
+      best_image: headline.png
       info:
         desc: "We have many successful athletes competing in local and international competition"
     kids:
-      # best_image: snaileo_gonzales.jpg
+      best_image: headline.jpg
       info:
         desc: "Setting a good example for the next generation of martial artists"
+    seminars:
+      best_image: headline.jpg
+      info:
+        desc: "Seminars we have attended around the world"
     secret:
       hidden: true          # Don't show this gallery on the index page. People must guess the URL.
