@@ -21,7 +21,9 @@
   {% else %}
     <meta content="website" property="og:type">
   {% endif %}
-  {% if page.description %}
+  {% if page.og_description %}
+    <meta content="{{ page.og_description }}" property="og:description">
+  {% else if page.description %}
     <meta content="{{ page.description }}" property="og:description">
   {% else %}
     <meta content="{{ site.description }}" property="og:description">
