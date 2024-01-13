@@ -8,13 +8,13 @@ background: '/img/bg-about.jpg'
 
 <ul class="nav nav-pills" id="myTab" role="tablist">
   <li class="nav-item mr-2" role="presentation">
-    <button class="nav-link active" id="about-tab" data-toggle="tab" data-target="#about" type="button" role="tab" aria-controls="home" aria-selected="true">About</button>
+    <a href="#about" class="nav-link active" id="about-tab" data-toggle="tab" data-target="#about" type="button" role="tab" aria-controls="home" aria-selected="true">About</a>
   </li>
   <li class="nav-item mr-2" role="presentation">
-    <button class="nav-link" id="instructors-tab" data-toggle="tab" data-target="#instructors" type="button" role="tab" aria-controls="instructors" aria-selected="false">Instructors</button>
+    <a href="#instructors" class="nav-link" id="instructors-tab" data-toggle="tab" data-target="#instructors" type="button" role="tab" aria-controls="instructors" aria-selected="false">Instructors</a>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="faq-tab" data-toggle="tab" data-target="#faq" type="button" role="tab" aria-controls="faq" aria-selected="false">Frequently Asked Questions</button>
+    <a href="#faq" class="nav-link" id="faq-tab" data-toggle="tab" data-target="#faq" type="button" role="tab" aria-controls="faq" aria-selected="false">Frequently Asked Questions</a>
   </li>
 </ul>
 <div class="tab-content pt-3" id="myTabContent">
@@ -38,12 +38,59 @@ background: '/img/bg-about.jpg'
     <p>To see our weekly group class schedule and learn more about specific programs offered, see our <a href="/schedule">schedule page</a>.</p>
   </div>
   <div class="tab-pane fade" id="instructors" role="tabpanel" aria-labelledby="instructors-tab">
-    <p class="text-center alert alert-warning mt-0 mb-5">
+    <p class="text-center alert alert-warning mt-0 mb-4">
       Please check back soon. We will be updating this page as we get closer to our February 1st opening date.
+
     </p>
+
+    <div class="row">
+      <div class="col-md-6 justify-content-center mb-4">
+        <div class="justify-content-center card rounded border-0 shadow">
+          <img src="/img/instructors/evan.jpg" alt="...">
+          <div class="card-body p-3 p-xl-4">
+            <div class="mb-4">
+              <h3 class="h4 mb-0">Evan Brooks</h3>
+              <span class="text-primary small">Head Grappling Instructor</span>
+            </div>
+            <ul class="list-unstyled mb-4">
+              <li><span class="bg-dark p-1 d-block text-light rounded border-red">Brazilian Jiu-Jitsu black belt, 1st degree</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 justify-content-center mb-4">
+        <div class="justify-content-center card rounded border-0 shadow">
+          <img src="/img/instructors/eristela.jpg" alt="...">
+          <div class="card-body p-3 p-xl-4">
+            <div class="mb-4">
+              <h3 class="h4 mb-0">Eristela Giorgo</h3>
+              <span class="text-primary small">Women's Grappling Instructor</span>
+            </div>
+            <ul class="list-unstyled mb-4">
+              <li><span class="bg-dark text-light p-1 d-block rounded border-purple">Brazilian Jiu-Jitsu brown belt</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 justify-content-center mb-4">
+        <div class="justify-content-center card rounded border-0 shadow">
+          <img src="/img/instructors/matt.jpg" alt="...">
+          <div class="card-body p-3 p-xl-4">
+            <div class="mb-4">
+              <h3 class="h4 mb-0">Matt Fagan</h3>
+              <span class="text-primary small">Grappling/Striking Instructor</span>
+            </div>
+            <ul class="list-unstyled mb-4">
+              <li class="mb-3"><span class="bg-dark p-1 d-block text-light rounded border-purple">Brazilian Jiu-Jitsu purple belt</span></li>
+              <li><span class="bg-dark p-1 d-block text-light rounded border-red">WTF Taekwondo black belt, 1st degree</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="tab-pane fade" id="faq" role="tabpanel" aria-labelledby="faq-tab">
-    <p class="text-center alert alert-warning mt-0 mb-5">
+    <p class="text-center alert alert-warning mt-0 mb-4">
       Please check back soon. We will be updating this page as we get closer to our February 1st opening date.
     </p>
   </div>
