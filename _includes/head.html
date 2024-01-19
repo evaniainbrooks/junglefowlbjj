@@ -35,10 +35,10 @@
     <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
     <meta content="{{ site.url }}/about/" property="article:author">
   {% endif %}
-  {% if page.image %}
-    <meta content="{{ site.url }}/assets/img/posts/{{ page.image }}" property="og:image">
+  {% if page.image || page.background %}
+    <meta content="{{ site.url }}/{{ page.image || page.background }}" property="og:image">
   {% else %}
-    <meta content="{{ site.url }}/assets/img/logo-hires.png" property="og:image">
+    <meta content="{{ site.url }}/img/logo-hires.png" property="og:image">
   {% endif %}
   {% if page.categories %}
     {% for category in page.categories limit:1 %}
