@@ -56,5 +56,13 @@ gallery:
       best_image: headline.jpg
       info:
         desc: "Seminars we have attended around the world"
+    boxing:
+      best_image: headline.jpg
+      info:
+        desc: "Boxing classes and fights"
+    kickboxing:
+      best_image: headline.jpg
+      info:
+        desc: "Kickboxing classes and fights"
     secret:
       hidden: true          # Don't show this gallery on the index page. People must guess the URL.
