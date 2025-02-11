@@ -1,20 +1,24 @@
 ---
 layout: page_wide
+title: Gallery
+description: "Pictures and video from our students and classes"
 ---
 <style TYPE="text/css">
-.gallery-best-image{
-  max-height: 20em;
-  max-width: 20em;
-}
+  .gallery-best-image {
+    max-height: 20em;
+    max-width: 20em;
+  }
 </style>
 <div class="row">
   {% for gallery in page.galleries %}
-  <div class="col-md-6">
-      <a href="{{ gallery['gallery'] }}">
-          <img class="gallery-best-image" src="{{ gallery['gallery'] }}/thumbs/{{ gallery['best_image'] }}">
-      </a>
-      <h3><a href="{{ gallery['gallery'] }}">{{ gallery["name"] }}</a></h3>
+  <div class="col-md-6 py-3 text-center">
+    <a href="{{ gallery['gallery'] }}">
+      <img class="gallery-best-image" src="{{ gallery['gallery'] }}/thumbs/{{ gallery['best_image'] }}">
+    </a>
+    <h3><a href="{{ gallery['gallery'] }}">{{ gallery["name"] }}</a></h3>
+    <span class="small">
       {{ gallery["images"] | size }} image{% if gallery["images"].size != 1 %}s{% endif %}
+    </span>
   </div>
   {% endfor %}
 </div>
