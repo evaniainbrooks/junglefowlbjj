@@ -23,10 +23,65 @@ form: true
 </div>
 
 <div class="my-3">
-  <div class="text-center card p-3">
-    <div class="card-body">
-      <h3 class="h4">Class Descriptions</h3>
-      <p class="text-muted">Coming soon. For questions please <a href="/contact">contact us</a> or check <a href="/about#faq">frequently asked questions</a>.</p>
+  <h3 class="h4 mb-3">Class Descriptions</h3>
+  <ul class="nav nav-pills mb-3" id="classTab" role="tablist">
+    <li class="nav-item mr-2 mb-2" role="presentation">
+      <a class="border nav-link active" id="bjj-tab" data-toggle="tab" href="#bjj" role="tab" aria-controls="bjj" aria-selected="true">Brazilian Jiu-Jitsu</a>
+    </li>
+    <li class="nav-item mr-2 mb-2" role="presentation">
+      <a class="border nav-link" id="nogi-tab" data-toggle="tab" href="#nogi" role="tab" aria-controls="nogi" aria-selected="false">No-Gi Grappling</a>
+    </li>
+    <li class="nav-item mr-2 mb-2" role="presentation">
+      <a class="border nav-link" id="kickboxing-tab" data-toggle="tab" href="#kickboxing" role="tab" aria-controls="kickboxing" aria-selected="false">Kickboxing</a>
+    </li>
+    <li class="nav-item mr-2 mb-2" role="presentation">
+      <a class="border nav-link" id="mma-tab" data-toggle="tab" href="#mma" role="tab" aria-controls="mma" aria-selected="false">MMA</a>
+    </li>
+    <li class="nav-item mr-2 mb-2" role="presentation">
+      <a class="border nav-link" id="kids-tab" data-toggle="tab" href="#kids" role="tab" aria-controls="kids" aria-selected="false">Kids</a>
+    </li>
+    <li class="nav-item mr-2 mb-2" role="presentation">
+      <a class="border nav-link" id="yoga-tab" data-toggle="tab" href="#yoga" role="tab" aria-controls="yoga" aria-selected="false">Yoga</a>
+    </li>
+    <li class="nav-item mb-2" role="presentation">
+      <a class="border nav-link" id="sc-tab" data-toggle="tab" href="#sc" role="tab" aria-controls="sc" aria-selected="false">Strength &amp; Conditioning</a>
+    </li>
+  </ul>
+  <div class="tab-content" id="classTabContent">
+    <div class="tab-pane fade show active" id="bjj" role="tabpanel" aria-labelledby="bjj-tab">
+      <p>Brazilian Jiu-Jitsu (BJJ) is a ground-based martial art and combat sport that focuses on grappling, joint locks, and choke holds. Practitioners wear a traditional gi (uniform) and learn to use leverage and technique to control and submit opponents regardless of size or strength.</p>
+      <p>Classes are structured to be welcoming to complete beginners while still providing challenge and growth for experienced practitioners. A typical class includes a warm-up, a technique drilling segment, and live sparring (rolling). Progress is marked through a belt ranking system: white, blue, purple, brown, and black belt.</p>
+      <p><strong>What to bring:</strong> A gi is required. Loaner gis are available for your first few classes. Please ensure your gi and body are clean before every class.</p>
+    </div>
+    <div class="tab-pane fade" id="nogi" role="tabpanel" aria-labelledby="nogi-tab">
+      <p>No-Gi grappling applies the same principles as Brazilian Jiu-Jitsu — leverage, control, and submissions — but without the traditional gi uniform. Students wear athletic shorts and a rash guard or t-shirt, and grips are based on body positioning rather than grabbing clothing.</p>
+      <p>No-Gi is highly practical for self-defence and cross-trains well with wrestling and MMA. Classes cover takedowns, clinch control, guard work, and finishing techniques including leg locks. All experience levels are welcome.</p>
+      <p><strong>What to bring:</strong> Athletic shorts (no zippers or pockets), a rash guard or fitted t-shirt, and optional spats/leggings. Mouthguard recommended for sparring.</p>
+    </div>
+    <div class="tab-pane fade" id="kickboxing" role="tabpanel" aria-labelledby="kickboxing-tab">
+      <p>Kickboxing classes cover the fundamentals of striking — punches, kicks, knees, and footwork — in a structured and safe environment. Classes are suitable for those interested in fitness, self-defence, or competitive fighting.</p>
+      <p>You will learn proper technique, combination work on bags and pads, and defensive movement. Partner work and light sparring options are available for those who want to take it further. No prior experience is necessary.</p>
+      <p><strong>What to bring:</strong> Boxing gloves and hand wraps are required. Loaner gloves are available. Shin guards are recommended for sparring.</p>
+    </div>
+    <div class="tab-pane fade" id="mma" role="tabpanel" aria-labelledby="mma-tab">
+      <p>Mixed Martial Arts (MMA) classes blend striking and grappling disciplines into a complete combat sport skill set. Students learn how to transition between stand-up striking, clinch work, takedowns, and ground fighting.</p>
+      <p>Our facility includes a half-cage, providing a realistic training experience for those interested in competing or simply gaining well-rounded martial arts skills. Classes are structured for all levels and draw from BJJ, wrestling, kickboxing, and Muay Thai.</p>
+      <p><strong>What to bring:</strong> MMA gloves or boxing gloves, hand wraps, shin guards, and a mouthguard. Athletic shorts and a rash guard are recommended.</p>
+    </div>
+    <div class="tab-pane fade" id="kids" role="tabpanel" aria-labelledby="kids-tab">
+      <p>Our kids program is designed for children ages 5–15 and focuses on developing confidence, discipline, coordination, and respect in a fun and supportive environment. Classes incorporate Brazilian Jiu-Jitsu and movement-based games tailored to each age group.</p>
+      <p>Children learn practical self-defence skills while building physical fitness and social skills. Our instructors are experienced working with youth and prioritize a safe, positive atmosphere. Older children may also be encouraged to participate in adult classes.</p>
+      <p><strong>What to bring:</strong> Comfortable athletic clothing. A gi is recommended but not required to start. Loaner equipment is available.</p>
+    </div>
+    <div class="tab-pane fade" id="yoga" role="tabpanel" aria-labelledby="yoga-tab">
+      <p>Yoga classes at Junglefowl are geared toward athletes and martial artists looking to improve flexibility, mobility, and recovery. Sessions focus on breathwork, functional movement, and poses that complement training on the mats.</p>
+      <p>No prior yoga experience is required. Classes are open to all fitness levels and are an excellent complement to any of our other programs.</p>
+      <p><strong>What to bring:</strong> Comfortable, stretchy clothing. A yoga mat is helpful but the mats in the gym work fine.</p>
+    </div>
+    <div class="tab-pane fade" id="sc" role="tabpanel" aria-labelledby="sc-tab">
+      <p>Strength and Conditioning classes are designed to build functional athletic capacity — strength, power, endurance, and mobility — using our fully equipped conditioning area. Equipment includes barbells, kettlebells, pull-up rigs, and more.</p>
+      <p>Sessions are structured around compound movements and conditioning circuits that translate directly to performance on the mats and in everyday life. All fitness levels are welcome and movements are scalable.</p>
+      <p><strong>What to bring:</strong> Athletic clothing and training shoes. A water bottle is recommended.</p>
     </div>
   </div>
 </div>
