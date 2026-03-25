@@ -6,261 +6,347 @@ og_description: Junglefowl Brazilian Jiu-Jitsu. Group class price list. Brazilia
 background: '/img/bg-prices.jpg'
 form: true
 ---
-<p class="text-center alert alert-info mb-3">
-  We no longer take payments for drop-ins. If you are visiting from out of town, the training is on us, free of
-  charge.<br><br>
-  See our 10 class punch pass for a more flexible membership option. </p>
-<h3 class="text-center mb-3">Adults</h3>
-<div class="row">
+<style>
+  .price-section-heading {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  .price-section-heading::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #0085A1;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+  }
+
+  .price-card {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .price-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 22px rgba(0,0,0,0.15);
+  }
+  .price-card.featured {
+    box-shadow: 0 3px 16px rgba(40,167,69,0.22);
+  }
+  .price-card.featured:hover {
+    box-shadow: 0 8px 28px rgba(40,167,69,0.3);
+  }
+
+  .price-header {
+    padding: 0.85rem 1.25rem;
+    text-align: center;
+  }
+  .price-header h5 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    margin: 0;
+    color: #fff;
+  }
+  .price-header .best-value {
+    display: inline-block;
+    background: rgba(255,255,255,0.25);
+    border-radius: 20px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    margin-top: 4px;
+    color: #fff;
+  }
+
+  .price-body {
+    padding: 1.25rem 1.25rem 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .price-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #aaa;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  .price-tag {
+    text-align: center;
+    margin-bottom: 1.1rem;
+    line-height: 1;
+  }
+  .price-amount {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #1a1a1a;
+  }
+  .price-per {
+    font-size: 0.9rem;
+    color: #999;
+  }
+  .price-details {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.25rem;
+    font-size: 0.88rem;
+    color: #555;
+    flex: 1;
+  }
+  .price-details li {
+    padding: 0.35rem 0;
+    border-bottom: 1px solid #f2f2f2;
+  }
+  .price-details li:last-child { border-bottom: none; }
+  .price-details .saving {
+    color: #28a745;
+    font-weight: 700;
+  }
+
+  .btn-price {
+    display: block;
+    padding: 0.65rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: opacity 0.15s, transform 0.1s;
+    border: none;
+    cursor: pointer;
+    margin-top: auto;
+  }
+  .btn-price:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+    text-decoration: none;
+  }
+  .btn-green { background: #28a745; color: #fff; }
+  .btn-teal  { background: #0085A1; color: #fff; }
+  .btn-muted { background: #6c757d; color: #fff; }
+
+  .discount-amount {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #0085A1;
+    display: block;
+    text-align: center;
+    margin: 0.5rem 0 0.25rem;
+  }
+  .discount-group-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #aaa;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+</style>
+
+<p class="alert alert-info text-center mb-4">
+  We no longer accept drop-in payments — if you're visiting from out of town, training is on us, free of charge.<br>
+  See the <strong>10 class punch pass</strong> for a flexible membership option.
+</p>
+
+<h2 class="price-section-heading">Adults</h2>
+<div class="row mb-3">
   <div class="col-lg-4 col-md-12 mb-4">
-    <div class="card card1 h-100 border-success">
-      <div class="card-header bg-success">
-        <h5 class="card-title text-white text-center mt-2">1 year prepaid</h5>
+    <div class="price-card featured">
+      <div class="price-header bg-success">
+        <h5>1 Year Prepaid</h5>
+        <span class="best-value">Best Value</span>
       </div>
-      <div class="card-body">
-        <small class='text-muted'>Unlimited training</small>
-        <br><br>
-        <span class="h2">$70</span>/month        <br><br>
-        <ul>
-          <li>$966 up front total</li>
-          <li class="font-weight-bold">Save $207</li>
-        </ul>
-        <div style="padding: 20px;">
-          <a target="_blank" href="https://square.link/u/Sv10byGV?src=embed" style="
-            display: inline-block;
-            font-size: 18px;
-            line-height: 48px;
-            height: 48px;
-            color: #ffffff;
-            min-width: 212px;
-            background-color: #28a745;
-            text-align: center;
-            box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
-            border-radius: 6px;
-          ">Buy now</a>
+      <div class="price-body">
+        <p class="price-label">Unlimited training</p>
+        <div class="price-tag">
+          <span class="price-amount">$70</span><span class="price-per">/mo</span>
         </div>
+        <ul class="price-details">
+          <li>$840 billed up front</li>
+          <li class="saving">Save $207</li>
+        </ul>
+        <a target="_blank" href="https://square.link/u/Sv10byGV?src=embed" class="btn-price btn-green">Buy now</a>
       </div>
     </div>
   </div>
   <div class="col-lg-4 col-md-12 mb-4">
-    <div class="card card2 h-100 border-primary">
-      <div class="card-header bg-primary">
-        <h5 class="card-title text-white text-center mt-2">6 months prepaid</h5>
+    <div class="price-card">
+      <div class="price-header bg-primary">
+        <h5>6 Months Prepaid</h5>
       </div>
-      <div class="card-body">
-        <small class='text-muted'>Unlimited training</small>
-        <br><br>
-        <span class="h2">$75</span>/month        <br><br>
-        <ul>
-          <li>$518 up front total</li>
-          <li class="font-weight-bold">Save $70</li>
-        </ul>
-        <div style="padding: 20px;">
-          <a target="_blank" href="https://square.link/u/ECM0roaX?src=embed" style="
-            display: inline-block;
-            font-size: 18px;
-            line-height: 48px;
-            height: 48px;
-            color: #ffffff;
-            min-width: 212px;
-            background-color: #0085A1;
-            text-align: center;
-            box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
-            border-radius: 6px;
-          ">Buy now</a>
+      <div class="price-body">
+        <p class="price-label">Unlimited training</p>
+        <div class="price-tag">
+          <span class="price-amount">$75</span><span class="price-per">/mo</span>
         </div>
+        <ul class="price-details">
+          <li>$450 billed up front</li>
+          <li class="saving">Save $70</li>
+        </ul>
+        <a target="_blank" href="https://square.link/u/ECM0roaX?src=embed" class="btn-price btn-teal">Buy now</a>
       </div>
     </div>
   </div>
   <div class="col-lg-4 col-md-12 mb-4">
-    <div class="card card3 h-100 border-secondary">
-      <div class="card-header bg-secondary">
-        <h5 class="card-title text-white text-center mt-2">Month to month</h5>
+    <div class="price-card">
+      <div class="price-header bg-secondary">
+        <h5>Month to Month</h5>
       </div>
-      <div class="card-body">
-        <small class='text-muted'>Unlimited training</small>
-        <br><br>
-        <span class="h2">$85</span>/month        <br><br>
-        <ul>
-          <li>$97.75 monthly total</li>
+      <div class="price-body">
+        <p class="price-label">Unlimited training</p>
+        <div class="price-tag">
+          <span class="price-amount">$85</span><span class="price-per">/mo</span>
+        </div>
+        <ul class="price-details">
           <li class="font-weight-bold">No contracts</li>
         </ul>
-
-        <div style="padding: 20px;">
-          <a target="_blank" href="https://square.link/u/ZfeQB1UJ?src=embed" style="
-            display: inline-block;
-            font-size: 18px;
-            line-height: 48px;
-            height: 48px;
-            color: #000000;
-            min-width: 212px;
-            background-color: #d9d9d9;
-            text-align: center;
-            box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
-            border-radius: 6px;
-          ">Buy now</a>
-        </div>
+        <a target="_blank" href="https://square.link/u/ZfeQB1UJ?src=embed" class="btn-price btn-muted">Buy now</a>
       </div>
     </div>
   </div>
 </div>
 
-<h3 class="text-center mb-3 mt-5">Children</h3>
-<div class="row">
+<h2 class="price-section-heading mt-4">Children</h2>
+<div class="row mb-3">
   <div class="col-lg-4 col-md-12 mb-4">
-    <div class="card card1 h-100 border-success">
-      <div class="card-header bg-success">
-        <h5 class="card-title text-white text-center mt-2">1 year prepaid</h5>
+    <div class="price-card featured">
+      <div class="price-header bg-success">
+        <h5>1 Year Prepaid</h5>
+        <span class="best-value">Best Value</span>
       </div>
-      <div class="card-body">
-        <small class='text-muted'>Unlimited training</small>
-        <br><br>
-        <span class="h2">$50</span>/month        <br><br>
-        <ul>
-          <li>$690 up front total</li>
-          <li class="font-weight-bold">Save $207</li>
+      <div class="price-body">
+        <p class="price-label">Unlimited training</p>
+        <div class="price-tag">
+          <span class="price-amount">$50</span><span class="price-per">/mo</span>
+        </div>
+        <ul class="price-details">
+          <li>$600 billed up front</li>
+          <li class="saving">Save $207</li>
         </ul>
       </div>
     </div>
   </div>
   <div class="col-lg-4 col-md-12 mb-4">
-    <div class="card card2 h-100 border-primary">
-      <div class="card-header bg-primary">
-        <h5 class="card-title text-white text-center mt-2">6 months prepaid</h5>
+    <div class="price-card">
+      <div class="price-header bg-primary">
+        <h5>6 Months Prepaid</h5>
       </div>
-      <div class="card-body">
-        <small class='text-muted'>Unlimited training</small>
-        <br><br>
-        <span class="h2">$55</span>/month        <br><br>
-        <ul>
-          <li>$380 up front total</li>
-          <li class="font-weight-bold">Save $70</li>
+      <div class="price-body">
+        <p class="price-label">Unlimited training</p>
+        <div class="price-tag">
+          <span class="price-amount">$55</span><span class="price-per">/mo</span>
+        </div>
+        <ul class="price-details">
+          <li>$330 billed up front</li>
+          <li class="saving">Save $70</li>
         </ul>
       </div>
-
-
     </div>
   </div>
   <div class="col-lg-4 col-md-12 mb-4">
-    <div class="card card3 h-100 border-secondary">
-      <div class="card-header bg-secondary">
-        <h5 class="card-title text-white text-center mt-2">Month to month</h5>
+    <div class="price-card">
+      <div class="price-header bg-secondary">
+        <h5>Month to Month</h5>
       </div>
-      <div class="card-body">
-        <small class='text-muted'>Unlimited training</small>
-        <br><br>
-        <span class="h2">$65</span>/month        <br><br>
-        <ul>
-          <li>$74.75 monthly total</li>
+      <div class="price-body">
+        <p class="price-label">Unlimited training</p>
+        <div class="price-tag">
+          <span class="price-amount">$65</span><span class="price-per">/mo</span>
+        </div>
+        <ul class="price-details">
           <li class="font-weight-bold">No contracts</li>
         </ul>
       </div>
-
-
     </div>
   </div>
 </div>
 
-<h3 class="text-center mb-3 mt-5">Discounts and other offers</h3>
+<h2 class="price-section-heading mt-4">Discounts &amp; Other Offers</h2>
 <div class="row">
-  <div class="col-lg-3 col-md-12 mb-4">
-    <div class="card card1 h-100 border-secondary">
-      <div class="card-header bg-secondary">
-        <h5 class="card-title text-white text-center mt-2">Student Offer</h5>
+  <div class="col-lg-3 col-md-6 mb-4">
+    <div class="price-card">
+      <div class="price-header bg-secondary">
+        <h5>Student Offer</h5>
       </div>
-      <div class="card-body">
-        <small class='text-muted'>4 months unlimited training</small>
-        <br><br>
-        <span class="h2">$229</span>        <br><br>
-        <ul>
-          <li>$240 total</li>
-          <li>September-January or January-April</li>
+      <div class="price-body">
+        <p class="price-label">4 months unlimited training</p>
+        <div class="price-tag">
+          <span class="price-amount">$229</span>
+        </div>
+        <ul class="price-details">
+          <li>Sept–Jan or Jan–Apr</li>
           <li>Students only</li>
         </ul>
-        <div style="padding: 20px 0px 20px 0px;">
-          <a target="_blank" href="https://square.link/u/EvY30oAe?src=embed" style="
-	    display: inline-block;
-	    font-size: 18px;
-	    line-height: 48px;
-	    height: 48px;
-	    color: #ffffff;
-	    min-width: 212px;
-	    background-color: #28a745;
-	    text-align: center;
-	    box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
-	    border-radius: 6px;
-	  ">Buy now</a>
-        </div>
+        <a target="_blank" href="https://square.link/u/EvY30oAe?src=embed" class="btn-price btn-green">Buy now</a>
       </div>
     </div>
   </div>
-  <div class="col-lg-3 col-md-12 mb-4">
-    <div class="card card1 h-100 border-secondary">
-      <div class="card-header bg-secondary">
-        <h5 class="card-title text-white text-center mt-2">10 class punch pass</h5>
+  <div class="col-lg-3 col-md-6 mb-4">
+    <div class="price-card">
+      <div class="price-header bg-secondary">
+        <h5>10 Class Punch Pass</h5>
       </div>
-      <div class="card-body">
-        <small class='text-muted'>10 classes any time (ADULT ONLY)</small>
-        <br><br>
-        <span class="h2">$130</span>        <br><br>
-        <ul>
-          <li>$149.50 total</li>
+      <div class="price-body">
+        <p class="price-label">Adults only · any time</p>
+        <div class="price-tag">
+          <span class="price-amount">$130</span>
+        </div>
+        <ul class="price-details">
           <li>Expires after 3 years</li>
-          <li>Adults only</li>
         </ul>
-        <div style="padding: 20px 0px 20px 0px;">
-          <a target="_blank" href="https://square.link/u/olDFx8MS?src=embed" style="
-	    display: inline-block;
-	    font-size: 18px;
-	    line-height: 48px;
-	    height: 48px;
-	    color: #ffffff;
-	    min-width: 212px;
-	    background-color: #28a745;
-	    text-align: center;
-	    box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
-	    border-radius: 6px;
-	  ">Buy now</a>
+        <a target="_blank" href="https://square.link/u/olDFx8MS?src=embed" class="btn-price btn-green">Buy now</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 mb-4">
+    <div class="price-card">
+      <div class="price-header bg-secondary">
+        <h5>Family Membership</h5>
+      </div>
+      <div class="price-body">
+        <p class="price-label">Same household</p>
+        <div class="price-tag">
+          <span class="price-amount">$85</span><span class="price-per">/mo</span>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-3 col-md-12 mb-4">
-    <div class="card card2 h-100 border-secondary">
-      <div class="card-header bg-secondary">
-        <h5 class="card-title text-white text-center mt-2">Family membership</h5>
-      </div>
-      <div class="card-body">
-        <small class='text-muted'>+$15 each member</small>
-        <br><br>
-        <span class="h2">$85</span>/month        <br><br>
-        <ul>
-          <li>Same household</li>
-          <li>eg. 3 members, $85 + $15 * 2 = $115</li>
+        <ul class="price-details">
+          <li>+$15 per additional member</li>
+          <li>e.g. 3 members = $115/mo</li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="col-lg-3 col-md-12 mb-4">
-    <div class="card card3 h-100 border-secondary">
-      <div class="card-header bg-secondary">
-        <h5 class="card-title text-white text-center mt-2">Special discounts</h5>
+  <div class="col-lg-3 col-md-6 mb-4">
+    <div class="price-card">
+      <div class="price-header bg-secondary">
+        <h5>Special Discounts</h5>
       </div>
-      <div class="card-body">
-        <small class='text-muted'>Adult memberships only</small>
-        <br><br>
-        <span class="h2">10%</span>
-        <br><br>
-        <ul>
+      <div class="price-body">
+        <p class="price-label">Adult memberships only</p>
+        <p class="discount-group-label">10% off for</p>
+        <ul class="price-details mb-3">
           <li>First responders</li>
           <li>Law enforcement</li>
-          <li>Military/veterans</li>
+          <li>Military &amp; veterans</li>
           <li>Corrections</li>
         </ul>
-        <br><br>
-        <span class="h2">20%</span>
-        <br><br>
-        <ul>
+        <p class="discount-group-label">20% off for</p>
+        <ul class="price-details">
           <li>Students</li>
         </ul>
       </div>
