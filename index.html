@@ -3,3 +3,226 @@ layout: home
 og_description: Junglefowl Brazilian Jiu-Jitsu. Professional martial arts training in Sackville, New Brunswick.
 background: '/img/bg-index.jpg'
 ---
+<style>
+  /* ── Hero rows ── */
+  .hero-row {
+    min-height: 440px;
+  }
+  .hero-img {
+    min-height: 320px;
+    background-size: cover;
+    background-position: center top;
+  }
+  .hero-text {
+    background: #fff;
+    padding: 3rem 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-text-inner {
+    max-width: 420px;
+  }
+  .hero-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: #b83d08;
+    margin-bottom: 0.55rem;
+  }
+  .hero-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #111;
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+  }
+  .hero-desc {
+    font-size: 0.93rem;
+    color: #555;
+    line-height: 1.65;
+    margin-bottom: 1.4rem;
+  }
+  .hero-btn {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 9px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+    margin-right: 0.5rem;
+    margin-bottom: 0.4rem;
+  }
+  .hero-btn-primary {
+    background: #b83d08;
+    color: #fff;
+    border: 2px solid #b83d08;
+  }
+  .hero-btn-primary:hover {
+    background: #962f04;
+    border-color: #962f04;
+    color: #fff;
+    text-decoration: none;
+  }
+  .hero-btn-outline {
+    background: transparent;
+    color: #b83d08;
+    border: 2px solid #b83d08;
+  }
+  .hero-btn-outline:hover {
+    background: #b83d08;
+    color: #fff;
+    text-decoration: none;
+  }
+  /* Alternate text panel tint */
+  .hero-text-alt {
+    background: #f7f5f3;
+  }
+
+  /* ── Programs strip ── */
+  .programs-strip {
+    background: #111;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem 0.6rem;
+  }
+  .programs-strip .strip-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #777;
+    margin-right: 0.5rem;
+    white-space: nowrap;
+  }
+  .program-pill {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #ddd;
+    background: #222;
+    border: 1px solid #333;
+    border-radius: 3px;
+    padding: 4px 11px;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+  }
+  .program-pill:hover {
+    background: #b83d08;
+    border-color: #b83d08;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* ── Info cards ── */
+  .info-card {
+    border: none;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 1.6rem 1.5rem 1.4rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .info-card-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #fef0e7;
+    color: #b83d08;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+  }
+  .info-card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 0.35rem;
+  }
+  .info-card-text {
+    font-size: 0.88rem;
+    color: #666;
+    line-height: 1.55;
+    flex: 1;
+    margin-bottom: 1.1rem;
+  }
+  .info-card-link {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #b83d08;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+  }
+  .info-card-link:hover {
+    color: #962f04;
+    text-decoration: underline;
+  }
+  .info-card-link i { font-size: 0.75rem; margin-left: 3px; }
+</style>
+
+<!-- ── Hero 1: Adult Programs (image left) ── -->
+<div class="row no-gutters hero-row">
+  <div class="col-md-6 hero-img" style="background-image: url('/img/posts/04.jpg');"></div>
+  <div class="col-md-6 hero-text">
+    <div class="hero-text-inner">
+      <div class="hero-label">For all levels</div>
+      <h2 class="hero-title">Adult Martial Arts &amp; Fitness</h2>
+      <p class="hero-desc">BJJ, No-Gi grappling, Kickboxing, MMA, Yoga, and Strength &amp; Conditioning — all under one roof. Complete beginners and seasoned competitors alike are welcome.</p>
+      <a href="/schedule" class="hero-btn hero-btn-primary">View Schedule</a>
+      <a href="/about" class="hero-btn hero-btn-outline">About Us</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── Hero 2: Kids BJJ (image right) ── -->
+<div class="row no-gutters hero-row">
+  <div class="col-md-6 hero-img order-md-2" style="background-image: url('/img/bg-schedule.jpg');"></div>
+  <div class="col-md-6 hero-text hero-text-alt order-md-1">
+    <div class="hero-text-inner">
+      <div class="hero-label">Ages 5–15</div>
+      <h2 class="hero-title">Kids Brazilian Jiu-Jitsu</h2>
+      <p class="hero-desc">Our kids program builds confidence, discipline, and coordination in a structured and fun environment. Loaner equipment available — no gi required to start.</p>
+      <a href="/contact" class="hero-btn hero-btn-primary">Contact Us</a>
+      <a href="/about#faq" class="hero-btn hero-btn-outline">FAQ</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── Hero 3: Free Trial (image left) ── -->
+<div class="row no-gutters hero-row">
+  <div class="col-md-6 hero-img" style="background-image: url('/img/bg-index.jpg'); background-position: center;"></div>
+  <div class="col-md-6 hero-text">
+    <div class="hero-text-inner">
+      <div class="hero-label">No obligations</div>
+      <h2 class="hero-title">First Week Free</h2>
+      <p class="hero-desc">Try any class (or all of them) for a full week at no charge. Just show up 10 minutes early, sign a waiver, and get on the mat. We'll take care of the rest.</p>
+      <a href="/schedule" class="hero-btn hero-btn-primary">See the Schedule</a>
+      <a href="/contact" class="hero-btn hero-btn-outline">Get in Touch</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── Programs strip ── -->
+<div class="programs-strip">
+  <span class="strip-label">Programs</span>
+  <a class="program-pill" href="/schedule#bjj">Brazilian Jiu-Jitsu</a>
+  <a class="program-pill" href="/schedule#nogi">No-Gi Grappling</a>
+  <a class="program-pill" href="/schedule#kickboxing">Kickboxing</a>
+  <a class="program-pill" href="/schedule#mma">MMA</a>
+  <a class="program-pill" href="/schedule#kids">Kids BJJ</a>
+  <a class="program-pill" href="/schedule#yoga">Yoga</a>
+  <a class="program-pill" href="/schedule#sc">Strength &amp; Conditioning</a>
+</div>
+
