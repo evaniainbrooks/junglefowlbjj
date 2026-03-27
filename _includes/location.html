@@ -1,19 +1,117 @@
-<div class="card p-3">
-  <div class="card-body">
-    <h4 class="h5">
-      Junglefowl Brazilian Jiu-Jitsu</h4>
+<style>
+  .loc-card {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 16px rgba(0,0,0,0.13);
+  }
+  .loc-header {
+    background: #b83d08;
+    color: #fff;
+    padding: 1.1rem 1.25rem 1rem;
+    border-left: 4px solid rgba(0,0,0,0.2);
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7), 0 1px 2px rgba(0,0,0,0.5);
+  }
+  .loc-header .loc-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    margin: 0 0 2px;
+  }
+  .loc-header .loc-tagline {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.75);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin: 0;
+  }
+  .loc-body {
+    padding: 1rem 1.25rem 1.1rem;
+    background: #fff;
+  }
+  .loc-address {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.55rem;
+    margin-bottom: 0.6rem;
+    font-size: 1.05rem;
+    color: #222;
+    line-height: 1.6;
+  }
+  .loc-address .fa-map-marker-alt {
+    color: #0085A1;
+    margin-top: 3px;
+    flex-shrink: 0;
+  }
+  .loc-hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #0085A1;
+    background: #e8f6f9;
+    border-radius: 4px;
+    padding: 4px 9px;
+    margin-bottom: 0.9rem;
+  }
+  .loc-links {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .loc-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #0085A1;
+    border: 1.5px solid #0085A1;
+    border-radius: 4px;
+    padding: 5px 11px;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+  }
+  .loc-link:hover {
+    background: #0085A1;
+    color: #fff;
+    text-decoration: none;
+  }
+  .loc-map iframe {
+    display: block;
+    width: 100%;
+    border: 0;
+  }
+</style>
 
-    <p class="card-text">
-
-      <i class="fas fa-map-marker-alt"></i>
-      86 Main Street<br>Sackville, New Brunswick<br>E4L 1G6</p>
-
-    <p class="text-muted text-secondary small">Entrance at the back left of the building.</p>
-    <p class="card-text">
-      <a href="mailto:contact@junglefowlbjj.ca">Email</a> | <a href="tel:+19022977781">Phone</a> | <a href="/img/map.jpg" rel="noopener noreferrer" target="_blank">Directions</a>
-    </p>
+<div class="loc-card">
+  <div class="loc-header">
+    <p class="loc-name">Junglefowl Brazilian Jiu-Jitsu</p>
+    <p class="loc-tagline">Sackville, New Brunswick</p>
   </div>
-  <div class="ratio ratio-1x1">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2776.7136538430946!2d-64.37177532305037!3d45.897039771084366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b5f50eeccf81e27%3A0x734ee7b6dd81b482!2s86%20Main%20St%2C%20Sackville%2C%20NB%20E4L%201G6%2C%20Canada!5e0!3m2!1sen!2sgr!4v1704628289994!5m2!1sen!2sgr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <div class="loc-body">
+    <div class="loc-address">
+      <i class="fas fa-map-marker-alt"></i>
+      <span>86 Main Street<br>Sackville, NB &nbsp;E4L 1G6</span>
+    </div>
+    <div class="loc-hint">
+      <i class="fas fa-sign-in-alt"></i>
+      Entrance at the back left of the building
+    </div>
+    <div class="loc-links">
+      <a class="loc-link" href="mailto:contact@junglefowlbjj.ca">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+      <a class="loc-link" href="tel:+19022977781">
+        <i class="fas fa-phone"></i> Call
+      </a>
+      <a class="loc-link" href="/img/map.jpg" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-directions"></i> Directions
+      </a>
+    </div>
+  </div>
+  <div class="loc-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2776.7136538430946!2d-64.37177532305037!3d45.897039771084366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b5f50eeccf81e27%3A0x734ee7b6dd81b482!2s86%20Main%20St%2C%20Sackville%2C%20NB%20E4L%201G6%2C%20Canada!5e0!3m2!1sen!2sgr!4v1704628289994!5m2!1sen!2sgr" height="260" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 </div>
