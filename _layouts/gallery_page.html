@@ -1,32 +1,149 @@
 ---
 layout: page_wide
 ---
-<style TYPE="text/css">
-.gallery-image-wrapper {
-  height: 300px;
-  width: 300px;
-  display: inline-block;
-  margin: 1em;
-  position: relative;
+<style>
+.gallery-carousel {
+  height: 70vh;
+  background: #111;
 }
-.gallery-image {
-  margin: auto;
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  max-height: 100%;
-  max-width: 100%;
+.gallery-carousel .carousel-inner,
+.gallery-carousel .carousel-item {
+  height: 100%;
+}
+.gallery-carousel-img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  cursor: zoom-in;
+}
+.gallery-zoom-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+.gallery-zoom-overlay img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  box-shadow: 0 0 40px rgba(0,0,0,0.8);
+}
+.gallery-zoom-close {
+  position: fixed;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  line-height: 1;
+  user-select: none;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto;
+  height: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  opacity: 0.6;
+}
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+}
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+  box-shadow: none;
+  outline: none;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 3rem;
+  height: 3rem;
+}
+.gallery-thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+.gallery-thumbnail {
+  height: 70px;
+  width: auto;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+.gallery-thumbnail:hover,
+.gallery-thumbnail.active {
+  opacity: 1;
 }
 </style>
+
 <h3><a href="/{{ site.gallery.dir }}">{{ site.gallery.galleries[page.gallery].info.desc }}</a></h3>
 <hr />
-<div class="row">
-  {% for image in page.images %}
-      <div class="gallery-image-wrapper">
-          <a name="{{ image.name }}"></a>
-          <a href="{{ image.name }}"{% if site.gallery.lightbox %} rel="lightbox[{{ page.gallery }}]"{% endif %}>
-              <img class="gallery-image" src="thumbs/{{ image.name }}" />
-          </a>
+
+<div data-controller="zoom" data-action="keydown@window->zoom#keydown">
+
+  <div class="gallery-zoom-overlay" data-zoom-target="overlay" data-action="click->zoom#closeOnBackdrop">
+    <span class="gallery-zoom-close" data-action="click->zoom#close">&times;</span>
+    <img data-zoom-target="zoomedImg" src="" alt="Zoomed image" />
+  </div>
+
+  <div id="gallery-carousel-{{ page.gallery }}" class="carousel slide gallery-carousel" data-bs-ride="false">
+    <div class="carousel-inner">
+      {% for image in page.images %}
+      <div class="carousel-item{% if forloop.first %} active{% endif %}">
+        <a href="{{ image.name }}" data-action="click->zoom#open" data-full-src="{{ image.name }}">
+          <img class="gallery-carousel-img d-block" src="{{ image.name }}" alt="{{ image.name }}" />
+        </a>
       </div>
-  {% endfor %}
+      {% endfor %}
+    </div>
+
+    <button class="carousel-control-prev" type="button"
+            data-bs-target="#gallery-carousel-{{ page.gallery }}" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button"
+            data-bs-target="#gallery-carousel-{{ page.gallery }}" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+
+  </div>
+
+  <div class="gallery-thumbnails" id="gallery-thumbs-{{ page.gallery }}">
+    {% for image in page.images %}
+    <img class="gallery-thumbnail{% if forloop.first %} active{% endif %}"
+         src="thumbs/{{ image.name }}"
+         alt="{{ image.name }}"
+         data-bs-target="#gallery-carousel-{{ page.gallery }}"
+         data-bs-slide-to="{{ forloop.index0 }}" />
+    {% endfor %}
+  </div>
+
+  <div class="mt-3">
+    <a href="/{{ site.gallery.dir }}" class="btn btn-outline-secondary">View other galleries</a>
+  </div>
+
 </div>
+
+<script>
+(function () {
+  var carousel = document.getElementById('gallery-carousel-{{ page.gallery }}');
+  var thumbs = document.querySelectorAll('#gallery-thumbs-{{ page.gallery }} .gallery-thumbnail');
+  carousel.addEventListener('slid.bs.carousel', function (e) {
+    thumbs.forEach(function (t) { t.classList.remove('active'); });
+    thumbs[e.to].classList.add('active');
+    thumbs[e.to].scrollIntoView({ block: 'nearest', inline: 'nearest' });
+  });
+})();
+</script>

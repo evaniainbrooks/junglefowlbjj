@@ -64,4 +64,13 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
 
+  <script type="importmap">
+    {
+      "imports": {
+        "@hotwired/stimulus": "https://cdn.jsdelivr.net/npm/@hotwired/stimulus@3.2.2/dist/stimulus.js"
+      }
+    }
+  </script>
+  <script type="module" src="{{ "/assets/application.js" | relative_url }}"></script>
+
 </head>
